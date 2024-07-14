@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/plugins/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Profile Group</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white p-0 fixed-top">
+            <div class="container-lg d-flex">
+                <a class="navbar-brand p-0" href="#">
+                    <img src="assets/img/logo.png" class="image" alt="">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon-cus text-white fs-3"><i class="fa-solid fa-bars"></i></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end d-lg-flex flex-lg-row align-items-lg-center px-3"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header d-lg-none">
+                        <a class="navbar-brand p-0" href="#">
+                            <img src="assets/img/logo.png" class="image" alt="">
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="input-group me-lg-auto">
+                        <span class="input-group-text border-0 text-secondary rounded-start-3" id="search"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control border-0 px-0 rounded-end-3" placeholder="Search ..."
+                            aria-label="search" aria-describedby="search">
+                    </div>
+                    <div class="offcanvas-body pt-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a class="nav-link d-flex flex-lg-column align-items-center justify-content-lg-center"
+                                    href="#">
+                                    <div
+                                        class="nav-link-icon d-flex align-items-center justify-content-center rounded-5 position-relative">
+                                        <img src="assets/img/nav/solid/home.svg" class="nav-icon" alt="">
+                                        <img src="assets/img/nav/solid_hover/home.svg"
+                                            class="nav-icon-hover position-absolute opacity-0" alt="">
+                                    </div>
+                                    <span class="nav-link-title ps-3 ps-lg-0">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link d-flex flex-lg-column align-items-center justify-content-lg-center"
+                                    href="#">
+                                    <div
+                                        class="nav-link-icon d-flex align-items-center justify-content-center rounded-5 position-relative">
+                                        <img src="assets/img/nav/solid/job.svg" class="nav-icon" alt="">
+                                        <img src="assets/img/nav/solid_hover/job.svg"
+                                            class="nav-icon-hover position-absolute opacity-0" alt="">
+                                    </div>
+                                    <span class="nav-link-title ps-3 ps-lg-0">Jobs</span>
+                                </a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link d-flex flex-lg-column align-items-center justify-content-lg-center"
+                                    href="#">
+                                    <div
+                                        class="nav-link-icon d-flex align-items-center justify-content-center rounded-5 position-relative">
+                                        <img src="assets/img/nav/solid/news.svg" class="nav-icon" alt="">
+                                        <img src="assets/img/nav/solid_hover/news.svg"
+                                            class="nav-icon-hover position-absolute opacity-0" alt="">
+                                    </div>
+                                    <span class="nav-link-title ps-3 ps-lg-0">Article</span>
+                                </a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link d-flex flex-lg-column align-items-center justify-content-lg-center"
+                                    href="#">
+                                    <div
+                                        class="nav-link-icon d-flex align-items-center justify-content-center rounded-5 position-relative">
+                                        <img src="assets/img/nav/solid/notification.svg" class="nav-icon" alt="">
+                                        <img src="assets/img/nav/solid_hover/notification.svg"
+                                            class="nav-icon-hover position-absolute opacity-0" alt="">
+                                        <span
+                                            class="noti-alert position-absolute top-0 start-100 border border-light rounded-circle">
+                                            <span class="fs-6 fw-medium">9</span>
+                                        </span>
+                                    </div>
+                                    <span class="nav-link-title ps-3 ps-lg-0">Notification</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" data-bs-auto-close="outside">
+                                    <div class="nav-link-icon pf-image rounded-circle overflow-hidden m-auto mt-2 mt-lg-0">
+                                        <img src="assets/img/profile.jpg" class="image" alt="">
+                                    </div>
+                                    <span class="nav-link-title pf-title ps-3 ps-lg-0">Article</span>
+                                </a>
+                                <ul class="dropdown-menu main-dropdown position-lg-absolute translate-middle-x">
+                                    <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                                    <li class="dropstart">
+                                        <a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">Deep Dropdown <i
+                                                class="fa-solid fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu deep-dropdown">
+                                            <li><a href="#" class="dropdown-item">Deep Dropdown 1</a></li>
+                                            <li><a href="#" class="dropdown-item">Deep Dropdown 2</a></li>
+                                            <li><a href="#" class="dropdown-item">Deep Dropdown 3</a></li>
+                                            <li><a href="#" class="dropdown-item">Deep Dropdown 4</a></li>
+                                            <li><a href="#" class="dropdown-item">Deep Dropdown 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-lg">
+            <div class="row g-4">
+                <div class="col-12 col-lg-8 main-left">
+                    <div class="card pt-3 px-3 rounded-4 border-0 bg-white">
+                        <div class="card-header border-0 rounded-3">
+                            <div class="pf-cover overflow-hidden">
+                                <img src="assets/img/group-cover.png" alt="Error-cover-img" class="image">
+                            </div>
+                        </div>
+                        <div class="card-body w-100 p-0 py-4">
+                            <div class="pf-content d-flex">
+                                <div class="pf-image overflow-hidden">
+                                    <img src="assets/img/group-profile.png" class="image" alt="Error-pf-img">
+                                </div>
+                                <div class="pf-text px-3 py-2">
+                                    <div class="name">
+                                        <h4 class="fs-4">UX UI Design</h4>
+                                    </div>
+                                    <div class="pf-privacy fs-6 text-secondary">
+                                        <i class="fa-solid fa-lock"></i> <span>Design</span>
+                                    </div>
+                                </div>
+                                <div class="pf-btn-block ms-auto">
+                                    <div class="d-flex gap-2">
+                                        <button type="button" name="" id="" class="btn btn-pf text-dark rounded-2">
+                                            Invite
+                                        </button>
+                                        <button type="button" name="" id="" class="btn btn-pf text-dark rounded-2">
+                                            •••
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-foot p-0">
+                            <ul class="nav nav-underline" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-secondary fs-6 fw-medium active px-3 py-2 rounded-0"
+                                        id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed"
+                                        type="button" role="tab" aria-controls="pills-feed"
+                                        aria-selected="true">Feed</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-secondary fs-6 fw-medium px-3 py-2 rounded-0"
+                                        id="pills-photos-tab" data-bs-toggle="pill" data-bs-target="#pills-photos"
+                                        type="button" role="tab" aria-controls="pills-photos"
+                                        aria-selected="false">Photos</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-secondary fs-6 fw-medium px-3 py-2 rounded-0"
+                                        id="pills-video-tab" data-bs-toggle="pill" data-bs-target="#pills-video"
+                                        type="button" role="tab" aria-controls="pills-video"
+                                        aria-selected="false">Video</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-secondary fs-6 fw-medium px-3 py-2 rounded-0"
+                                        id="pills-link-tab" data-bs-toggle="pill" data-bs-target="#pills-link"
+                                        type="button" role="tab" aria-controls="pills-link"
+                                        aria-selected="false">Links</button>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="card mt-4 p-3 rounded-4 bg-white border-0 d-flex flex-row justify-content-between">
+                        <div class="card-pf-image rounded-5 overflow-hidden">
+                            <img src="assets/img/profile.jpg" alt="" class="image">
+                        </div>
+                        <form action="" class="post-block d-flex justify-content-between align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <input type="text" class="post-btn rounded-3 px-3" placeholder="Create Post">
+                            <div class="photo-icon">
+                                <img src="assets/img/icon/image.svg" class="image" alt="Eror-icon-image">
+                            </div>
+                        </form>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Create Post</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body py-2">
+                                        <div class="d-flex flex-row align-items-center pb-3">
+                                            <div class="card-pf-image rounded-5 overflow-hidden">
+                                                <img src="assets/img/profile.jpg" alt="" class="image">
+                                            </div>
+                                            <div class="pf-text px-2">
+                                                <h4 class="name fs-6">Lori Ferguson</h4>
+                                                <span class="badge badge-lightblue">Admin</span>
+                                            </div>
+                                        </div>
+                                        <form action="" method="get" class="form-post">
+                                            <textarea name="message" id="message" style="height: 70px;"
+                                                class="form-input-text w-100 border-0"
+                                                placeholder="Write something here ..."></textarea>
+                                            <div class="form-btn-group pt-3 pb-2">
+                                                <button type="button"
+                                                    class="border-0 w-auto h-auto bg-transparent"><span
+                                                        class="badge rounded-pill me-2 py-2 badge-lightgreen"><i
+                                                            class="fa-solid fa-image pe-1"></i> Photo </span></button>
+                                                <button type="button"
+                                                    class="border-0 w-auto h-auto bg-transparent"><span
+                                                        class="badge rounded-pill me-2 py-2 badge-lightyellow"><i
+                                                            class="fa-solid fa-face-smile pe-1"></i> Emoji
+                                                    </span></button>
+                                                <button type="button"
+                                                    class="border-0 w-auto h-auto bg-transparent"><span
+                                                        class="badge rounded-pill me-2 py-2 badge-lightblue"><i
+                                                            class="fa-regular fa-calendar-days pe-1"></i> Schedule
+                                                    </span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="row w-100 g-2">
+                                            <div class="col-6 ps-0 pe-1">
+                                                <button type="button" class="btn btn-light text-secondary w-100"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                            <div class="col-6 pe-0 ps-1">
+                                                <button type="submit" class="btn btn-info w-100" disabled>Post</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card mt-4 px-3 py-4 rounded-4 border-0">
+                        
+                    </div> -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-feed" role="tabpanel"
+                            aria-labelledby="pills-feed-tab" tabindex="0">
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden">
+                                        <img src="assets/img/profile.jpg" alt="" class="image">
+                                    </div>
+                                    <div class="pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium">Lori Ferguson</span>
+                                        <span class="pf-online">Just now <i class="fa-solid fa-user-group"></i></span>
+                                    </div>
+                                    <button type="button" name="" id="" class="btn ms-auto p-0 text-dark rounded-2">
+                                        •••
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3">What is UX (User Experience)? UX, as you know, is User
+                                    Experience, and as the name
+                                    suggests it is used to design different ways in which the User can easily use the
+                                    application.
+                                </p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="post-image w-100 h-auto">
+                                            <img src="assets/img/img-post-1.png" alt="" class="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="react py-3">
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/react-heart.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/comment.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/share.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                </div>
+                                <div class="comment d-flex flex-row justify-content-between">
+                                    <div class="card-pf-image rounded-5 overflow-hidden">
+                                        <img src="assets/img/profile.jpg" alt="" class="image">
+                                    </div>
+                                    <div class="comment-form rounded-3 d-flex align-items-center">
+                                        <form action=""
+                                            class="w-100 px-3 d-flex justify-content-between align-items-center">
+                                            <input type="text" class="rounded-3 border-0 w-100"
+                                                placeholder="Add a comment ...">
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/img.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/emoji.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/share.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden">
+                                        <img src="assets/img/profile.jpg" alt="" class="image">
+                                    </div>
+                                    <div class="pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium">Lori Ferguson</span>
+                                        <span class="pf-online">Just now <i class="fa-solid fa-user-group"></i></span>
+                                    </div>
+                                    <button type="button" name="" id="" class="btn ms-auto p-0 text-dark rounded-2">
+                                        •••
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3">What is UX (User Experience)? UX, as you know, is User
+                                    Experience, and as the name
+                                    suggests it is used to design different ways in which the User can easily use the
+                                    application.
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <div class="post-image w-100 h-auto">
+                                            <img src="assets/img/img-post2.1.png" alt="" class="image">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="post-image w-100 h-auto">
+                                            <img src="assets/img/img-post2.1.png" alt="" class="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="react py-3">
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/react-heart.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/comment.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                    <button type="button" class="border-0 bg-transparent">
+                                        <img src="assets/img/react/share.svg" alt="Error-react-heart-icon">
+                                    </button>
+                                </div>
+                                <div class="comment d-flex flex-row justify-content-between">
+                                    <div class="card-pf-image rounded-5 overflow-hidden">
+                                        <img src="assets/img/profile.jpg" alt="" class="image">
+                                    </div>
+                                    <div class="comment-form rounded-3 d-flex align-items-center">
+                                        <form action=""
+                                            class="w-100 px-3 d-flex justify-content-between align-items-center">
+                                            <input type="text" class="rounded-3 border-0 w-100"
+                                                placeholder="Add a comment ...">
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/img.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/emoji.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                            <button type="button" class="border-0 bg-transparent">
+                                                <img src="assets/img/icon/share.svg" alt="Eror-icon-image" class="ms-3">
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0" aria-hidden="true">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden placeholder-glow">
+                                        <!-- <img src="assets/img/profile.jpg" alt="" class="image"> -->
+                                        <span class="placeholder col-12" style="height: 100%;"></span>
+                                    </div>
+                                    <div class="w-75 pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium placeholder-glow">
+                                            <span class="placeholder rounded-5 col-4"></span>
+                                        </span>
+                                        <span class="pf-online placeholder-glow">
+                                            <span class="placeholder rounded-5 col-2"></span>
+                                        </span>
+                                    </div>
+                                    <button type="button" name="" id=""
+                                        class="btn placeholder-glow ms-auto p-0 text-dark rounded-2">
+                                        <span class="placeholder rounded-5" style="width: 100px;"></span>
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3 placeholder-glow">
+                                    <span class="placeholder rounded-5 col-11"></span>
+                                    <span class="placeholder rounded-5 col-9"></span>
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="post-image w-100 rounded-4 overflow-hidden placeholder-glow"
+                                            style="height: 200px;">
+                                            <!-- <img src="assets/img/img-post-1.png" alt="" class="image"> -->
+                                            <span class="placeholder col-12" style="height: 100%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-photos" role="tabpanel" aria-labelledby="pills-photos-tab"
+                            tabindex="0">
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0" aria-hidden="true">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden placeholder-glow">
+                                        <!-- <img src="assets/img/profile.jpg" alt="" class="image"> -->
+                                        <span class="placeholder col-12" style="height: 100%;"></span>
+                                    </div>
+                                    <div class="w-75 pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium placeholder-glow">
+                                            <span class="placeholder rounded-5 col-4"></span>
+                                        </span>
+                                        <span class="pf-online placeholder-glow">
+                                            <span class="placeholder rounded-5 col-2"></span>
+                                        </span>
+                                    </div>
+                                    <button type="button" name="" id=""
+                                        class="btn placeholder-glow ms-auto p-0 text-dark rounded-2">
+                                        <span class="placeholder rounded-5" style="width: 100px;"></span>
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3 placeholder-glow">
+                                    <span class="placeholder rounded-5 col-11"></span>
+                                    <span class="placeholder rounded-5 col-9"></span>
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="post-image w-100 rounded-4 overflow-hidden placeholder-glow"
+                                            style="height: 200px;">
+                                            <!-- <img src="assets/img/img-post-1.png" alt="" class="image"> -->
+                                            <span class="placeholder col-12" style="height: 100%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab"
+                            tabindex="0">
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0" aria-hidden="true">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden placeholder-glow">
+                                        <!-- <img src="assets/img/profile.jpg" alt="" class="image"> -->
+                                        <span class="placeholder col-12" style="height: 100%;"></span>
+                                    </div>
+                                    <div class="w-75 pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium placeholder-glow">
+                                            <span class="placeholder rounded-5 col-4"></span>
+                                        </span>
+                                        <span class="pf-online placeholder-glow">
+                                            <span class="placeholder rounded-5 col-2"></span>
+                                        </span>
+                                    </div>
+                                    <button type="button" name="" id=""
+                                        class="btn placeholder-glow ms-auto p-0 text-dark rounded-2">
+                                        <span class="placeholder rounded-5" style="width: 100px;"></span>
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3 placeholder-glow">
+                                    <span class="placeholder rounded-5 col-11"></span>
+                                    <span class="placeholder rounded-5 col-9"></span>
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="post-image w-100 rounded-4 overflow-hidden placeholder-glow"
+                                            style="height: 200px;">
+                                            <!-- <img src="assets/img/img-post-1.png" alt="" class="image"> -->
+                                            <span class="placeholder col-12" style="height: 100%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-link" role="tabpanel" aria-labelledby="pills-link-tab"
+                            tabindex="0">
+                            <div class="card mt-4 px-3 py-4 rounded-4 border-0" aria-hidden="true">
+                                <div class="d-flex flex-row align-items-center pb-3">
+                                    <div class="card-pf-image rounded-5 overflow-hidden placeholder-glow">
+                                        <!-- <img src="assets/img/profile.jpg" alt="" class="image"> -->
+                                        <span class="placeholder col-12" style="height: 100%;"></span>
+                                    </div>
+                                    <div class="w-75 pf-text d-flex flex-column justify-content-center px-2">
+                                        <span class="name fs-6 fw-medium placeholder-glow">
+                                            <span class="placeholder rounded-5 col-4"></span>
+                                        </span>
+                                        <span class="pf-online placeholder-glow">
+                                            <span class="placeholder rounded-5 col-2"></span>
+                                        </span>
+                                    </div>
+                                    <button type="button" name="" id=""
+                                        class="btn placeholder-glow ms-auto p-0 text-dark rounded-2">
+                                        <span class="placeholder rounded-5" style="width: 100px;"></span>
+                                    </button>
+                                </div>
+                                <p class="post-detail pe-3 placeholder-glow">
+                                    <span class="placeholder rounded-5 col-11"></span>
+                                    <span class="placeholder rounded-5 col-9"></span>
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="post-image w-100 rounded-4 overflow-hidden placeholder-glow"
+                                            style="height: 200px;">
+                                            <!-- <img src="assets/img/img-post-1.png" alt="" class="image"> -->
+                                            <span class="placeholder col-12" style="height: 100%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 main-right">
+
+                    <div class="card card-about border-0 rounded-4 pt-3">
+                        <div class="card-header d-flex justify-content-between border-0 bg-transparent">
+                            <h4 class="fs-5">ABOUT</h4>
+                            <i class="fa-solid fa-ellipsis fs-5"></i>
+                        </div>
+                        <div class="card-body pt-0 pb-3">
+                            <p class="fs-6">
+                                This group is for students of FE Generation in Afternoon Class-The gaol of Creating this
+                                group is to share any information of our study
+                            </p>
+                            <h4 class="fs-5">Private</h4>
+                            <p>
+                                Only member can see who's in the group and what they post.
+                            </p>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-users fs-6 me-2"></i>
+                                <p class="">12 member</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-users fs-6 me-2"></i>
+                                <p class="active">6 online</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-address-card me-2 fs-6"></i>
+                                <p class="">1 posted</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-calendar-days me-2 fs-5"></i>
+                                <p class="">1 Created 01 Jan 2024 by chhaylay</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="card card-about border-0 rounded-4 my-4 pt-3">
+                        <div class="card-header border-0 bg-transparent">
+                            <h4 class="fs-5">
+                                Admin Tool
+                            </h4>
+                        </div>
+                        <div class="card-body pt-0 ps-4">
+                            <span class="d-flex me-2">
+                                <i class="fa-solid fa-user-group me-2"></i>
+                                <p>Manange members</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-user-plus me-2"></i>
+                                <p>Member requests</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-solid fa-user-check me-2"></i>
+                                <p>Pending approvals</p>
+                            </span>
+                            <span class="d-flex">
+                                <i class="fa-regular fa-calendar me-2"></i>
+                                <p>Scheduled posts</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const myModal = new bootstrap.Modal(
+            document.getElementById("staticBackdrop"),
+            options,
+        );
+    </script>
+
+    <script src="assets/plugins/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
